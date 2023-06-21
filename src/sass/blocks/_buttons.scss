@@ -2,11 +2,11 @@
     width: 150px;
     height: 30px;
     border-radius: 5px;
-    background-color: $main-color;
+    background-color: $button-color;
     border: none;
-    color: #ffffff;
+    color: $text-main-color;
     font-size: 12px;
-    font-weight: 500;
+    font-weight: 400;
     text-transform: uppercase;
     &_main {
         margin-top: 67px;
@@ -14,4 +14,5 @@
         height: 50px;
         font-size: 16px;
     }
+
 }
