@@ -1,0 +1,44 @@
+.carousel_slider {
+    padding: 81px 0 82px 0;
+
+    .slider {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        .prev_button {
+            background-image: url('../../icons/left.svg');
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            background-color: #ffff;
+            border: none;
+            width: 31px;
+            height: 50px;
+            margin-right: 66px;
+            
+        }
+        .next_button {
+            background-image: url('../../icons/right.svg');
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            background-color: #ffff;
+            border: none;
+            width: 31px;
+            height: 50px;
+            margin-left: 66px;
+        }
+    }
+    
+    .slide {
+        display: none;
+    }
+    
+    .active {
+        display: block;
+
+    }
+
+}
+
+
+

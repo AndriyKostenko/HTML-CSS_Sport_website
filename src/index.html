@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-    <div class="promo">
+    <section class="promo">
         <div class="container">
             <header class="header">
                 <a href="#" class="header__logo">
@@ -59,9 +59,9 @@
             </div>
             
         </div>
-    </div>
+    </section>
 
-    <div class="advantages">
+    <section class="advantages">
         <div class="container">
             <h2 class="advantages__title">OUR ADVANTAGES</h2>
             <div class="advantages__wrapper">
@@ -97,9 +97,9 @@
 
         </div>
 
-    </div>
+    </section>
 
-    <div class="consultation">
+    <section class="consultation">
         <div class="container">
             <h2 class="title title_left">
                 Get a free consultation  on the selection <br> of a heart rate monitor 
@@ -116,8 +116,25 @@
                 <button class="button button_submit" >REQUEST CONSULTATION</button>
             </form>
         </div>
+    </section>
 
-    </div>
+    <section class="carousel_slider">
+        <div class="container">
+           
+            <div class="slider">
+                <button class="prev_button" onclick="prevSlide()" type="button"></button>
+                <div class="slide"><img src="img/slide_1.jpg" alt="slide_1"></div>
+                <div class="slide"><img src="img/slide_2.jpg" alt="slide_2"></div>
+                <div class="slide"><img src="img/slide_3.jpg" alt="slide_3"></div>
+                <button class="next_button" onclick="nextSlide()"></button>
+            </div>
+            
+        </div>
+        
+        
+    </section>
+
+    <script src="js/script.js"></script>
 
 </body>
 </html>

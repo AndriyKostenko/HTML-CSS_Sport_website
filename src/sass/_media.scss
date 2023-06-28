@@ -78,6 +78,15 @@
             
         }
     }
+    .carousel_slider {
+        padding-left: 20px;
+        padding-right: 20px;
+        .slide{
+            img {
+                max-width: 180px;
+            }
+        }
+    }
 }
 
 @media (max-width: 375px) {
@@ -89,6 +98,25 @@
     .advantages {
         &__block {
             max-width: 120px;
+        }
+    }
+    .carousel_slider {
+        padding-left: 10px;
+        padding-right: 10px;
+        .slide{
+            img {
+                max-width: 175px;
+            }
+        }
+        .slider {
+            .next_button {
+                width: 16px;
+                height: 25px;
+            }
+            .prev_button {
+                width: 16px;
+                height: 25px;
+            }
         }
     }
 
