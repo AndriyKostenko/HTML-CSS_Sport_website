@@ -4,11 +4,12 @@
     .slider {
         display: flex;
         flex-direction: row;
+        justify-content: center;
         align-items: center;
         position: relative;
 
         .prev_button {
-            background-image: url('../../icons/left.svg');
+            background-image: url('../icons/left.svg');
             background-repeat: no-repeat;
             background-position: 50% 50%;
             background-color: #ffff;
@@ -19,7 +20,7 @@
             
         }
         .next_button {
-            background-image: url('../../icons/right.svg');
+            background-image: url('../icons/right.svg');
             background-repeat: no-repeat;
             background-position: 50% 50%;
             background-color: #ffff;
