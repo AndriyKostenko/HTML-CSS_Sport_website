@@ -1,0 +1,40 @@
+.clients {
+    padding-bottom: 71px;
+
+    &__content {
+        display: flex;
+        flex-direction: row;
+        margin-top: 100px;
+        &:nth-child(2) {
+            margin-top: 70px;
+        }
+        img {
+            margin-top: 10px;
+            width: 169px;
+            height: 169px;
+        }
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        padding-left: 62px;
+        &-name {
+            padding-bottom: 10px;
+            color: #0d0d0d;
+            font-size: 18px;
+            font-weight: 700;
+        }
+        &-subtitle {
+            color: #646464;
+            font-size: 14px;
+            font-weight: 300;
+            padding-bottom: 19px;
+        }
+        &-comment {
+            color: #0d0d0d;
+            font-size: 16px;
+            font-weight: 300;
+        }
+    }
+}

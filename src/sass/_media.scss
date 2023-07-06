@@ -28,7 +28,11 @@
         &__content {
             justify-content:space-around;
         }
-    }   
+    }  
+    .clients {
+        padding-left: 30px;
+        padding-right: 30px;
+    } 
 }
 
 @media (max-width: 767px) {
@@ -133,6 +137,17 @@
             max-width: 120px;
         }
     }
+    .consultation {
+        h2 {
+            padding-right: 20px;
+        }
+        &__descr {
+            padding-right: 20px;
+        }
+        .feed-form {
+            padding-right: 20px;
+        }
+    }
     .carousel_slider {
         padding-left: 10px;
         padding-right: 10px;
@@ -167,9 +182,29 @@
         }
         &__content {
             padding-right: 0px;
+        } 
+    }
+    .clients {
+        &__content {
+            display: flex;
+            flex-direction: column;
+            margin-top: 100px;
+            justify-content: center;
+            text-align: center;
+            &:nth-child(2) {
+                margin-top: 70px;
+            }
+            img {
+                display: block;
+                margin: 0 auto;
+                margin-top: 10px;
+                width: 100px;
+                height: 100px;
+            }
         }
-
-        
+        &__info {
+            padding-left: 10px;
+        }
     }
 
 }
