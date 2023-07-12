@@ -124,6 +124,28 @@
             padding-right: 0;
         }
     }
+    .clients {
+        &__content {
+            display: flex;
+            flex-direction: column;
+            margin-top: 100px;
+            justify-content: center;
+            text-align: center;
+            &:nth-child(2) {
+                margin-top: 70px;
+            }
+            img {
+                display: block;
+                margin: 0 auto;
+                margin-top: 10px;
+                width: 100px;
+                height: 100px;
+            }
+        }
+        &__info {
+            padding-left: 10px;
+        }
+    }
 }
 
 @media (max-width: 375px) {

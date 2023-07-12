@@ -24,7 +24,7 @@
                 <div class="header__contacts">
                     <a href="tel:+11111111111" 
                        class="header__phone">+1 (111) 111-11-11</a>
-                       <button class="button">request the call</button>
+                       <button data-modal="consultation" class="button">request the call</button>
 
                 </div>
             </header>
@@ -51,7 +51,7 @@
                     </div>
                 </div>
 
-                <button class="button button_main">request a consultation</button>
+                <button data-modal="consultation" class="button button_main">request a consultation</button>
                 <div class="promo__link">
                     or
                     <a href="#">GO TO CATALOG</a>
@@ -113,7 +113,7 @@
                 <input name="phone" required type="tel" placeholder="Your mobile number">
                 <input name="email" required type="email" placeholder="Your E-mail">
       
-                <button class="button button_submit" >REQUEST CONSULTATION</button>
+                <button data-modal="consultation" class="button button_submit" >REQUEST CONSULTATION</button>
             </form>
         </div>
     </section>
@@ -148,7 +148,7 @@
                     <div class="catalog-item__wrapper">
                         <div class="catalog-item__content catalog-item__content_active">
                             <img src="img/pulsometr.png" alt="pulsometr" class="catalog-item__img">
-                            <div class="catalog-item__subtitle">Polar FT1 heart rate monitor</div>
+                            <div class="catalog-item__subtitle">Polar AA2 heart rate monitor</div>
                             <div class="catalog-item__descr">
                                 For the first steps in heart rate training</div>
                             <a href="" class="catalog-item__link">More</a>
@@ -208,7 +208,7 @@
                     <div class="catalog-item__wrapper">
                         <div class="catalog-item__content catalog-item__content_active">
                             <img src="img/pulsometr.png" alt="pulsometr" class="catalog-item__img">
-                            <div class="catalog-item__subtitle">Polar FT1 heart rate monitor</div>
+                            <div class="catalog-item__subtitle">Polar MN2 heart rate monitor</div>
                             <div class="catalog-item__descr">
                                 For the first steps in heart rate training</div>
                             <a href="" class="catalog-item__link">More</a>
@@ -238,7 +238,7 @@
                     <div class="catalog-item__wrapper">
                         <div class="catalog-item__content catalog-item__content_active">
                             <img src="img/pulsometr.png" alt="pulsometr" class="catalog-item__img">
-                            <div class="catalog-item__subtitle">Polar FT1 heart rate monitor</div>
+                            <div class="catalog-item__subtitle">Polar ZF2 heart rate monitor</div>
                             <div class="catalog-item__descr">
                                 For the first steps in heart rate training</div>
                             <a href="" class="catalog-item__link">More</a>
@@ -268,7 +268,7 @@
                     <div class="catalog-item__wrapper">
                         <div class="catalog-item__content catalog-item__content_active">
                             <img src="img/pulsometr.png" alt="pulsometr" class="catalog-item__img">
-                            <div class="catalog-item__subtitle">Polar FT1 heart rate monitor</div>
+                            <div class="catalog-item__subtitle">Polar FF4 heart rate monitor</div>
                             <div class="catalog-item__descr">
                                 For the first steps in heart rate training</div>
                             <a href="" class="catalog-item__link">More</a>
@@ -298,7 +298,7 @@
                     <div class="catalog-item__wrapper">
                         <div class="catalog-item__content catalog-item__content_active">
                             <img src="img/pulsometr.png" alt="pulsometr" class="catalog-item__img">
-                            <div class="catalog-item__subtitle">Polar FT1 heart rate monitor</div>
+                            <div class="catalog-item__subtitle">Polar PO1 heart rate monitor</div>
                             <div class="catalog-item__descr">
                                 For the first steps in heart rate training</div>
                             <a href="" class="catalog-item__link">More</a>
@@ -330,7 +330,7 @@
                     <div class="catalog-item__wrapper">
                         <div class="catalog-item__content catalog-item__content_active">
                             <img src="img/pulsometr.png" alt="pulsometr" class="catalog-item__img">
-                            <div class="catalog-item__subtitle">Polar FT1 heart rate monitor</div>
+                            <div class="catalog-item__subtitle">Polar MN22 heart rate monitor</div>
                             <div class="catalog-item__descr">
                                 For the first steps in heart rate training</div>
                             <a href="" class="catalog-item__link">More</a>
@@ -361,7 +361,7 @@
                     <div class="catalog-item__wrapper">
                         <div class="catalog-item__content catalog-item__content_active">
                             <img src="img/pulsometr.png" alt="pulsometr" class="catalog-item__img">
-                            <div class="catalog-item__subtitle">Polar FT1 heart rate monitor</div>
+                            <div class="catalog-item__subtitle">Polar ZZ3 heart rate monitor</div>
                             <div class="catalog-item__descr">
                                 For the first steps in heart rate training</div>
                             <a href="" class="catalog-item__link">More</a>
@@ -390,7 +390,7 @@
                     <div class="catalog-item__wrapper">
                         <div class="catalog-item__content catalog-item__content_active">
                             <img src="img/pulsometr.png" alt="pulsometr" class="catalog-item__img">
-                            <div class="catalog-item__subtitle">Polar FT1 heart rate monitor</div>
+                            <div class="catalog-item__subtitle">Polar DS2 heart rate monitor</div>
                             <div class="catalog-item__descr">
                                 For the first steps in heart rate training</div>
                             <a href="" class="catalog-item__link">More</a>
@@ -487,6 +487,42 @@
             </div>
         </div>
     </footer>
+
+    <div class="overlay">
+        <div class="modal" id="consultation">
+            <div class="modal__close">&times;</div>
+            <div class="modal__subtitle">Simply fill up the form</div>
+            <div class="modal__descr">and we will call you back in 10 minutes</div>
+            <form class="feed-form feed-form_mt25" action="#">
+                <input name="name" required type="text" placeholder="Your name">
+                <input name="phone" required type="tel" placeholder="Your mobile number">
+                <input name="email" required type="email" placeholder="Your E-mail">
+      
+                <button class="button button_submit" >REQUEST CONSULTATION</button>
+            </form>
+        </div>
+
+        <div class="modal" id="order">
+            <div class="modal__close">&times;</div>
+            <div class="modal__subtitle">Your order</div>
+            <div class="modal__descr">Pulsometr Polsr GT1</div>
+            <form class="feed-form feed-form_mt25" action="#">
+                <input name="name" required type="text" placeholder="Your name">
+                <input name="phone" required type="tel" placeholder="Your mobile number">
+                <input name="email" required type="email" placeholder="Your E-mail">
+      
+                <button class="button button_submit" >BUY</button>
+            </form>
+        </div>
+
+        <div class="modal modal_mini">
+            <div class="modal__close">&times;</div>
+            <div class="modal__subtitle">Thanks for your order!</div>
+            <div class="modal__descr">Our manager will contact you soon!</div>
+        </div>
+
+
+    </div>
 
     <script src="js/script.js"></script>
 

@@ -1,12 +1,22 @@
-var slides = document.getElementsByClassName("slide");
+const slides = document.getElementsByClassName("slide");
 var currentSlide = 0;
-var tabs = document.getElementsByClassName("catalog__tab");
-var contents = document.getElementsByClassName("catalog__content");
-var itemContentsMain = document.getElementsByClassName("catalog-item__content");
-var itemContentsAdditional = document.getElementsByClassName("catalog-item__list")
+const tabs = document.getElementsByClassName("catalog__tab");
+const contents = document.getElementsByClassName("catalog__content");
+const itemContentsMain = document.getElementsByClassName("catalog-item__content");
+const itemContentsAdditional = document.getElementsByClassName("catalog-item__list")
 
-var moreLinks = Array.prototype.slice.call(document.getElementsByClassName("catalog-item__link"));
-var backLinks = Array.prototype.slice.call(document.getElementsByClassName("catalog-item__back"));
+const overlay = document.getElementsByClassName('overlay');
+const consultationModal = document.getElementById("consultation");
+const orderModal = document.getElementById('order');
+const modalMini = document.getElementsByClassName('modal_mini');
+
+const consultationButtons = document.querySelectorAll('[data-modal="consultation"]');
+const orderButtons = document.querySelectorAll('.button_mini')
+const closeButtons = document.querySelectorAll(".modal__close");
+
+
+const moreLinks = Array.prototype.slice.call(document.getElementsByClassName("catalog-item__link"));
+const backLinks = Array.prototype.slice.call(document.getElementsByClassName("catalog-item__back"));
 
 
 
@@ -61,8 +71,59 @@ function toggleItemSlide(items) {
 };
 
 
+
+
+function toggleRequestModal(buttons, modal, overlay) {
+
+    buttons.forEach( function(element) {
+        element.addEventListener("click", function() {
+     
+            if (overlay[0].classList.contains('overlay--trigger') === false) {
+                overlay[0].classList.add('overlay--trigger');
+                modal.classList.add('modal--trigger');
+            }
+            else {
+                overlay[0].classList.remove('overlay--trigger');
+                modal.classList.remove('modal--trigger');
+            }
+        
+        })
+    })
+}
+
+function orderRequestModal(buttons, modal, overlay) {
+
+    const descr = modal.querySelectorAll('.modal__descr');
+    const subtitle = document.querySelectorAll('.catalog-item__subtitle');
+
+    buttons.forEach( function(element, index) {
+        element.addEventListener('click', function() {
+
+            if (overlay[0].classList.contains('overlay--trigger') === false) {
+                descr[0].innerHTML = subtitle[index].innerHTML; // changing text in the modal window according an order
+                overlay[0].classList.add('overlay--trigger');
+                modal.classList.add('modal--trigger');
+            }
+            else {
+                modal.classList.remove('modal--trigger');
+                overlay[0].classList.remove('overlay--trigger');
+                
+            }
+
+        })
+    })
+}
+
+
             
 showSlide();
+
 changeTab(0);
+
 toggleItemSlide(moreLinks);
 toggleItemSlide(backLinks);
+
+toggleRequestModal(consultationButtons, consultationModal, overlay);
+orderRequestModal(orderButtons, orderModal, overlay);
+toggleRequestModal(closeButtons, consultationModal, overlay);
+
