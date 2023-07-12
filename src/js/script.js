@@ -18,6 +18,23 @@ const closeButtons = document.querySelectorAll(".modal__close");
 const moreLinks = Array.prototype.slice.call(document.getElementsByClassName("catalog-item__link"));
 const backLinks = Array.prototype.slice.call(document.getElementsByClassName("catalog-item__back"));
 
+const consultationForm = document.getElementById('form_consultation');
+const consultationForm2 = document.getElementById('form_consultation_2');
+const orderForm = document.getElementById('form_order');
+
+const consultationName = document.getElementById('consultation_name');
+const consultationMobile = document.getElementById('consultation_mobile');
+const consultationEmail = document.getElementById('consultation_email');
+
+const consultationName_2 = document.getElementById('consultation_name_2');
+const consultationMobile_2 = document.getElementById('consultation_mobile_2');
+const consultationEmail_2 = document.getElementById('consultation_email_2');
+
+
+const orderName = document.getElementById('order_name');
+const orderMobile = document.getElementById('order_mobile');
+const orderEmail = document.getElementById('order_email');
+
 
 
 function showSlide() {
@@ -113,15 +130,90 @@ function orderRequestModal(buttons, modal, overlay) {
 }
 
 
+function validateForm(form, name, mobile, email) {
+
+    const setError = (element, messsage) => {
+        console.log(element)
+        const inputControl = element.parentElement;
+        const errorDisplay = inputControl.querySelector('.error');
+    
+        errorDisplay.innerText = messsage;
+        inputControl.classList.add('error');
+        inputControl.classList.remove('success');
+    };
+    
+    const setSuccess = element => {
+        console.log(element)
+        const inputControl = element.parentElement;
+        const errorDisplay = inputControl.querySelector('.error');
+    
+        errorDisplay.innerText = '';
+        inputControl.classList.add('success');
+        inputControl.classList.remove('error');
+    };
+    
+    const isValidEmail = email => {
+        const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(String(email).toLowerCase());
+    };
+
+    const isValidMobile = mobile => {
+        const re = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
+        return re.test(mobile);
+    }
+
+    form.addEventListener('submit', event => {
+        event.preventDefault();
+
+        const userName = name.value.trim(); // to remove all whitespaces
+        const userMobile = mobile.value.trim();
+        const userEmail = email.value.trim();
+
+        if (userName === '' || userName.length < 2) {
+            setError(name, 'Username is required');
+        } else {
+            setSuccess(name);
+        }
+
+
+        if (userMobile === '') {
+            setError(mobile, 'Mobile is requiered');
+        } else if(!isValidMobile(userMobile)) {
+            setError(mobile, 'Provide a valid mobile number')
+        } else {
+            setSuccess(mobile)
+        }
+
+
+        if (userEmail === '') {
+            setError(email, 'Email is required')
+        } else if (!isValidEmail(userEmail)) {
+            setError(email, 'Provide a valid email address');
+        } else {
+            setSuccess(email);
+        }
+        
+    })
+
+
+}
+
+
+
+
             
 showSlide();
-
 changeTab(0);
-
 toggleItemSlide(moreLinks);
 toggleItemSlide(backLinks);
-
 toggleRequestModal(consultationButtons, consultationModal, overlay);
 orderRequestModal(orderButtons, orderModal, overlay);
 toggleRequestModal(closeButtons, consultationModal, overlay);
+
+validateForm(consultationForm, consultationName, consultationMobile, consultationEmail);
+validateForm(orderForm, orderName, orderMobile, orderEmail);
+validateForm(consultationForm2, consultationName_2, consultationMobile_2, consultationEmail_2);
+
+
+
 

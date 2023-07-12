@@ -108,12 +108,21 @@
                 Just fill out the application form <br>
                 and we will call you back within 10 minutes
             </div>
-            <form class="feed-form" action="#">
-                <input name="name" required type="text" placeholder="Your name">
-                <input name="phone" required type="tel" placeholder="Your mobile number">
-                <input name="email" required type="email" placeholder="Your E-mail">
+            <form class="feed-form" action="#" id="form_consultation_2">
+                <div class="input-control">
+                    <input id="consultation_name_2" name="name" type="text" placeholder="Your name">
+                    <div class="error"></div>
+                </div>
+                <div class="input-control">
+                    <input id="consultation_mobile_2" name="phone" type="tel" placeholder="Your mobile number">
+                    <div class="error"></div>
+                </div>
+                <div class="input-control">
+                    <input id="consultation_email_2" name="email" type="email" placeholder="Your E-mail">
+                    <div class="error"></div>
+                </div>
       
-                <button data-modal="consultation" class="button button_submit" >REQUEST CONSULTATION</button>
+                <button class="button button_submit" >REQUEST CONSULTATION</button>
             </form>
         </div>
     </section>
@@ -493,10 +502,20 @@
             <div class="modal__close">&times;</div>
             <div class="modal__subtitle">Simply fill up the form</div>
             <div class="modal__descr">and we will call you back in 10 minutes</div>
-            <form class="feed-form feed-form_mt25" action="#">
-                <input name="name" required type="text" placeholder="Your name">
-                <input name="phone" required type="tel" placeholder="Your mobile number">
-                <input name="email" required type="email" placeholder="Your E-mail">
+            <form class="feed-form feed-form_mt25" action="#" id="form_consultation">
+                <div class="input-control">
+                    <input id="consultation_name" name="name" type="text" placeholder="Your name">
+                    <div class="error"></div>
+                </div>
+                <div class="input-control">
+                    <input id="consultation_mobile" name="phone" type="tel" placeholder="Your mobile number">
+                    <div class="error"></div>
+                </div>
+                <div class="input-control">
+                    <input id="consultation_email" name="email" type="email" placeholder="Your E-mail">
+                    <div class="error"></div>
+                </div>
+
       
                 <button class="button button_submit" >REQUEST CONSULTATION</button>
             </form>
@@ -506,10 +525,20 @@
             <div class="modal__close">&times;</div>
             <div class="modal__subtitle">Your order</div>
             <div class="modal__descr">Pulsometr Polsr GT1</div>
-            <form class="feed-form feed-form_mt25" action="#">
-                <input name="name" required type="text" placeholder="Your name">
-                <input name="phone" required type="tel" placeholder="Your mobile number">
-                <input name="email" required type="email" placeholder="Your E-mail">
+            <form class="feed-form feed-form_mt25" action="#" id="form_order">
+                <div class="input-control">
+                    <input id="order_name" name="name" type="text" placeholder="Your name">
+                    <div class="error"></div>
+                </div>
+                <div class="input-control">
+                    <input id="order_mobile" name="phone" type="tel" placeholder="Your mobile number">
+                    <div class="error"></div>
+                </div>
+                <div class="input-control">
+                    <input id="order_email" name="email" type="email" placeholder="Your E-mail">
+                    <div class="error"></div>
+                </div>
+
       
                 <button class="button button_submit" >BUY</button>
             </form>
@@ -525,6 +554,7 @@
     </div>
 
     <script src="js/script.js"></script>
+    
 
 </body>
 </html>
