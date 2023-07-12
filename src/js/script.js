@@ -198,7 +198,14 @@ function validateForm(form, name, mobile, email) {
 
 }
 
+function maskPhoneInput(phoneInput) {
+    phoneInput.addEventListener('input', function(event) {
 
+        var x = event.target.value.replace(/\D/g, '').match(/(\d{0,3})(\d{0,3})(\d{0,4})/);
+        event.target.value = !x[2] ? x[1] : '(' + x[1] + ') ' + x[2] + (x[3] ? '-' + x[3] : '');
+    })
+
+}
 
 
             
@@ -213,7 +220,9 @@ toggleRequestModal(closeButtons, consultationModal, overlay);
 validateForm(consultationForm, consultationName, consultationMobile, consultationEmail);
 validateForm(orderForm, orderName, orderMobile, orderEmail);
 validateForm(consultationForm2, consultationName_2, consultationMobile_2, consultationEmail_2);
-
+maskPhoneInput(consultationMobile);
+maskPhoneInput(consultationMobile_2);
+maskPhoneInput(orderMobile);
 
 
 
