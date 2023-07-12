@@ -71,8 +71,6 @@ function toggleItemSlide(items) {
 };
 
 
-
-
 function toggleRequestModal(buttons, modal, overlay) {
 
     buttons.forEach( function(element) {

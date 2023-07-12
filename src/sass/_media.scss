@@ -146,6 +146,17 @@
             padding-left: 10px;
         }
     }
+    .modal {
+        width: 340px;
+        min-height: 380px;
+        left: 45%;
+    }
+    .feed-form {
+        width: 250px;
+        input {
+            font-weight: 200;
+        }
+    }
 }
 
 @media (max-width: 375px) {
@@ -226,6 +237,23 @@
         }
         &__info {
             padding-left: 10px;
+        }
+    }
+    .modal {
+        width: 245px;
+        min-height: 280px;
+        left: 40%;
+        padding-left: 25px;
+        &__close {
+            font-size: 35px;
+            right: -30px;
+
+        }
+    }
+    .feed-form {
+        width: 195px;
+        input {
+            font-weight: 150;
         }
     }
 
