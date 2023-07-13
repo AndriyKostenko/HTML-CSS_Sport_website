@@ -1,7 +1,14 @@
 @import 'base/variables';
+@import 'base/animations';
+
 * {
     font-family: 'Museo Sans Cyrl', sans-serif;
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
 .container {
     max-width: 950px;
     margin: 0 auto;
@@ -18,4 +25,5 @@
 @import 'blocks/clients';
 @import 'blocks/footer';
 @import 'blocks/modal';
+@import 'blocks/pageup';
 @import 'media.scss';

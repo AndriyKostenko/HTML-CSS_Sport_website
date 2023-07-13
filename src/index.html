@@ -7,10 +7,12 @@
     <title>Pulse</title>
     <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
     <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/style.min.css">
+
 </head>
 <body>
-    <section class="promo">
+    <section id="up" class="promo">
         <div class="container">
             <header class="header">
                 <a href="#" class="header__logo">
@@ -74,7 +76,7 @@
                 </div>
 
                 <div class="advantages__block">
-                    <img src="icons/advantages/heart.png" alt="heart" class="advantages__block-icon">
+                    <img src="icons/advantages/heart.png" alt="heart" class="advantages__block-icon advantages__block-icon-animated">
                     <div class="advantages__block-subtitle">Taking care of health</div>
                     <div class="advantages__block-descr">
                         We work for
@@ -432,7 +434,7 @@
         <div class="container">
             <h2 class="title">CUSTOMER'S FEEDBACKS</h2>
 
-                <div class="clients__content">
+                <div class="clients__content wow animate__fadeInUp" data-wow-duration="2s" data-wow-delay="1s">
                     <img src="img/feed_1.png" alt="client_photo_1" class="clients_photo">
                     <div class="clients__info">
                         <div class="clients__info-name">Irina Ivanchenko</div>
@@ -448,7 +450,7 @@
                     </div>
 
                 </div>
-                <div class="clients__content">
+                <div class="clients__content wow animate__fadeInUp" data-wow-duration="2s" data-wow-delay="1s">
                     <img src="img/feed_2.png" alt="client_photo_2" class="clients_photo">
                     <div class="clients__info">
                         <div class="clients__info-name">Ivan Semechkin</div>
@@ -462,7 +464,7 @@
                 </div>
 
 
-                <div class="clients__content">
+                <div class="clients__content wow animate__fadeInUp" data-wow-duration="2s" data-wow-delay="1s">
                     <img src="img/feed_3.png" alt="client_photo_3" class="clients_photo">
                     <div class="clients__info">
                         <div class="clients__info-name">Julia Dashkina</div>
@@ -553,6 +555,12 @@
 
     </div>
 
+    <a href="#up" class="pageup">
+        <img src="icons/up.svg" alt="up" >
+    </a>
+
+
+    <script src="js/wow.min.js"></script>
     <script src="js/script.js"></script>
     
 

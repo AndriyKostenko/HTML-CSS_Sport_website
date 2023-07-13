@@ -35,6 +35,8 @@ const orderName = document.getElementById('order_name');
 const orderMobile = document.getElementById('order_mobile');
 const orderEmail = document.getElementById('order_email');
 
+const arrow = document.getElementsByClassName('pageup');
+
 
 
 function showSlide() {
@@ -208,6 +210,34 @@ function maskPhoneInput(phoneInput) {
 }
 
 
+function topArrow(arrow){
+    window.onscroll = function() {
+        if (window.scrollY > 1600) {
+            arrow[0].classList.add('pageup-trigger');
+        } else {
+            arrow[0].classList.remove('pageup-trigger');
+        }
+    }
+}
+
+// wow.js animations
+var wow = new WOW(
+    {
+      boxClass:     'wow',      // animated element css class (default is wow)
+      animateClass: 'animate__animated', // animation css class (default is animated)
+      offset:       0,          // distance to the element when triggering the animation (default is 0)
+      mobile:       true,       // trigger animations on mobile devices (default is true)
+      live:         true,       // act on asynchronously loaded content (default is true)
+      callback:     function(box) {
+        // the callback is fired every time an animation is started
+        // the argument that is passed in is the DOM node being animated
+      },
+      scrollContainer: null,    // optional scroll container selector, otherwise use window,
+      resetAnimation: true,     // reset animation on end (default is true)
+    }
+  );
+wow.init();
+
             
 showSlide();
 changeTab(0);
@@ -216,13 +246,13 @@ toggleItemSlide(backLinks);
 toggleRequestModal(consultationButtons, consultationModal, overlay);
 orderRequestModal(orderButtons, orderModal, overlay);
 toggleRequestModal(closeButtons, consultationModal, overlay);
-
 validateForm(consultationForm, consultationName, consultationMobile, consultationEmail);
 validateForm(orderForm, orderName, orderMobile, orderEmail);
 validateForm(consultationForm2, consultationName_2, consultationMobile_2, consultationEmail_2);
 maskPhoneInput(consultationMobile);
 maskPhoneInput(consultationMobile_2);
 maskPhoneInput(orderMobile);
+topArrow(arrow);
 
 
 
