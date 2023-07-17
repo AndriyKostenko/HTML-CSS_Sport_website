@@ -139,12 +139,13 @@
                 transform: translateX(-100%);
                 margin-left: 0px;
             }
+
             li {
                 position: relative;
                 color: #555555;
                 font-size: 14px;
                 font-weight: 300;
-                margin-bottom: 20px;
+                margin-bottom: 10px;
                 &:before {
                     content: '';
                     position: absolute;
